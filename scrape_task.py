@@ -74,7 +74,6 @@ class AdventOfCodeTaskScraper:
             print(f"Error saving to local: {e}")
 
 
-
 class SoupUtils:
     @classmethod
     def fix_local_links(cls, soup: BeautifulSoup, base_url: str) -> BeautifulSoup:
@@ -134,10 +133,16 @@ class Args:
             description="Fetch and save Advent of Code tasks to local MD.",
         )
         parser.add_argument(
-            "--year", type=int, default=None, help="The year you want to scrape from.",
+            "--year",
+            type=int,
+            default=None,
+            help="The year you want to scrape from.",
         )
         parser.add_argument(
-            "--day", type=int, default=None, help="The day you want to scrape from.",
+            "--day",
+            type=int,
+            default=None,
+            help="The day you want to scrape from.",
         )
 
         args = parser.parse_args()
